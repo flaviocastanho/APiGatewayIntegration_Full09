@@ -1,30 +1,36 @@
+/*Acessar o diretorio do projeto e executar os camandos abaixo* /
 ./mvnw clean install
 ./mvnw spring-boot:run
 
-http://localhost:8080/api/v1/peca
-http://localhost:8080/api/v1/peca/ABC123
-http://localhost:8080/api/v1/peca/ABC123/componente
+/*Consumo Postman*/
+/*POST PECA*/
+curl: POST: http://localhost:8080/api/v1/peca 
+Header: "Content-Type: application/json"
+json:
+{
+	"codigo": "P001",
+	"nome": "Peça Exemplo 1"
+}
+
+/*GET PECAS*/
+curl: GET: http://localhost:8080/api/v1/peca
+
+/*GET PECA*/
+curl: GET: http://localhost:8080/api/v1/peca/P001
 
 
-curl -X POST http://localhost:8080/api/v1/peca \
- -H "Content-Type: application/json" \
- -d '{
-       "codigo": "P001",
-       "nome": "Peça Exemplo"
-     }'
-	 
-curl -X POST http://localhost:8080/api/v1/peca/P001/componente \
- -H "Content-Type: application/json" \
- -d '{
-       "sku": "SKU001",
-       "descricao": "Componente Exemplo",
-       "preco": 99.90,
-       "quantidade": 10
-     }'
+/*POST COMPONENTE*/
+curl: POST: http://localhost:8080/api/v1/peca/P001/componente
+Header: "Content-Type: application/json"
+json:
+{
+   "sku": "SKU001",
+   "descricao": "Componente Exemplo 1",
+   "preco": 99.90,
+   "quantidade": 10
+}
 
-curl http://localhost:8080/api/v1/peca/P001
+/*GET COMPONENTE*/
+curl: GET: http://localhost:8080/api/v1/peca/P001/componente
 
-curl http://localhost:8080/api/v1/peca
 
-curl http://localhost:8080/api/v1/peca/P001/componente
-	 
