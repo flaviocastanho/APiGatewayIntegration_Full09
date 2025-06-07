@@ -1,0 +1,11 @@
+com\example\pecas\controller\PecaController.class
+com\exemple\pecas\controller\PecaController.class
+com\exemple\pecas\model\Componente.class
+com\example\pecas\model\Componente.class
+com\example\pecas\PecasApplication.class
+com\example\pecas\repository\ComponenteRepository.class
+com\exemple\pecas\repository\PecaRepository.class
+com\example\pecas\repository\PecaRepository.class
+com\example\pecas\model\Peca.class
+com\exemple\pecas\model\Peca.class
+com\exemple\pecas\repository\ComponenteRepository.class
